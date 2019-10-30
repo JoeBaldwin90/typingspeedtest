@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Typing Speed Test</title>
+    <script src="testText.js" async></script>
+    <script src="script.js" async></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header id="headline">
+      <h1>Typing Speed Test</h1>
+    </header>
+    <main class="main">
+      <article id="intro">
+        <p>
+          Your goal is to type the provided text <strong>exactly</strong> as shown. <br />
+          The stopwatch starts when you start typing. Good Luck!
+        </p>
+      </article>
+      <!-- .intro -->
+      <article id="scores">
+        <div class="score-container">
+          <div class="score-box errors">Errors: 0</div>
+          <div class="score-box words">Words: 0</div>
+          <div class="score-box wpm">Score: 0.00wpm</div>
+        </div>
+      </article>
+      <!-- #scores -->
+      <section class="test-area">
+        <div class="text-selector">
+          <nav class="filters">
+            <ul class="filters-list">
+              <li>
+                <a href="easy.html" class="selected" difficulty-level="easy">
+                  Easy
+                </a>
+              </li>
+              <li>
+                <a href="intermediate.html" class="" difficulty-level="intermediate">
+                  Intermediate
+                </a>
+              </li>
+              <li>
+                <a href="expert.html" class="" difficulty-level="hard">
+                  Expert
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <!-- .text-selector -->
+
+        <div id="origin-text">
+          <p></p>
+          <span class="previous-score">Score to beat: 0.00wpm</span>
+        </div>
+        <!-- #origin-text -->
+
+        <div class="test-area-wrapper">
+          <textarea
+            id="user-typing-field"
+            name="textarea"
+            rows="6"
+            placeholder="The stopwatch starts when you start typing."
+          ></textarea>
+        </div>
+        <!-- .test-area-wrapper -->
+
+        <div class="meta">
+          <section class="clock">
+            <div class="timer">00:00:00</div>
+          </section>
+
+          <button id="reset">Start over</button>
+        </div>
+        <!-- .meta -->
+      </section>
+      <!-- .test-area -->
+    </main>
+  </body>
+</html>
