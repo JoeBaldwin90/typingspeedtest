@@ -27,7 +27,7 @@ startText.innerHTML = textArray[0];
 // -------------------------------------------------------- //
 // Helper function: Add leading zero to numbers 9 or below //
 // ------------------------------------------------------ //
-const leadingZero = (time) => {
+const leadingZero = time => {
   if (time <= 9) {
     time = `0${time}`;
   }
@@ -38,7 +38,9 @@ const leadingZero = (time) => {
 // Run the stopwatch (minute : second : millisecond) //
 // ------------------------------------------------ //
 const runTimer = () => {
-  const currentTime = `${leadingZero(timer[0])}:${leadingZero(timer[1])}:${leadingZero(timer[2])}`;
+  const currentTime = `${leadingZero(timer[0])}:${leadingZero(
+    timer[1],
+  )}:${leadingZero(timer[2])}`;
   stopwatch.innerHTML = currentTime;
 
   // Increments by 1 every 10ms
@@ -114,8 +116,8 @@ const startTimer = () => {
 // ------------------------------------------------------ //
 // Change typing challenge copy and update selected link //
 // ---------------------------------------------------- //
-difficultySelectors.forEach((link) => {
-  link.addEventListener('click', (e) => {
+difficultySelectors.forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
     let level = link.getAttribute('difficulty-level');
     let n = 0;
@@ -137,10 +139,10 @@ difficultySelectors.forEach((link) => {
 // ------------------------------ //
 // Set classlist for clicked tab //
 // ---------------------------- //
-difficultySelectors.forEach((link) => {
-  link.addEventListener('click', (e) => {
+difficultySelectors.forEach(link => {
+  link.addEventListener('click', e => {
     e.preventDefault();
-    difficultySelectors.forEach((selector) => {
+    difficultySelectors.forEach(selector => {
       selector.classList.remove('selected');
     });
     link.classList.add('selected');
