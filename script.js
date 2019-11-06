@@ -17,7 +17,7 @@ var timerRunning = false;
 var totalWordsTyped = 0;
 var wordSpeed = 0;
 var errors = 0;
-const textArray = [textEasy, textIntermediate, textExpert]; // testText.js
+const textArray = [textEasy, textIntermediate, textExpert]; // defined in testText.js
 
 // ---------------------------- //
 // Initialize typing test copy //
@@ -38,7 +38,7 @@ const leadingZero = time => {
 // Run the stopwatch (minute : second : millisecond) //
 // ------------------------------------------------ //
 const runTimer = () => {
-  currentTime = `
+  let currentTime = `
   ${leadingZero(timer[0])}:
   ${leadingZero(timer[1])}:
   ${leadingZero(timer[2])}
